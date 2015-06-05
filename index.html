@@ -1,0 +1,30 @@
+<html ng-app="angularCattery">
+	<title>Angular Cattery</title>
+	<head>
+		<link data-require="bootstrap-css" data-semver="3.1.1" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="style.css" />
+		
+		<script data-require="angular.js@1.2.x" src="http://code.angularjs.org/1.2.15/angular.js" data-semver="1.2.15"></script>
+		<script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		
+		<script src="app.js"></script>
+		<script src="ragdolls.js"></script>
+	</head>
+	
+	<body ng-controller="RagdollController as ragdollCtrl">
+		
+		<div id="ragdollContainer">
+			<h1>Angular Ragdoll Cattery!</h1>
+		
+			<div class="ragdollKitty" ng-repeat="ragdoll in ragdollCtrl.ragdolls">
+				<p><strong>Name: {{ragdoll.Name | uppercase}}</strong></p>
+				<p>Color: {{ragdoll.Color}}</p>
+				<p>Fluffiness factor: {{ragdoll.Fluffiness | number:2}}</p>
+				<img ng-src="{{ragdoll.Photos[$index]}}" />
+			</div>
+			
+			<div class="clearBoth"></div>		
+		</div>
+		
+	</body>	
+</html>

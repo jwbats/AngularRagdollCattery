@@ -1,0 +1,27 @@
+body {
+
+}
+
+#ragdollContainer {
+	width:900px;
+	border:1px solid black;
+	padding:10px;
+	margin:auto;
+}
+
+.ragdollKitty {
+	width:400px;
+	height:300px;
+	float:left;
+	margin:10px;
+	border:1px solid gray;
+	overflow:hidden;
+}
+
+.ragdollKitty img {
+	width:200px;
+}
+
+.clearBoth {
+	clear:both;
+}
