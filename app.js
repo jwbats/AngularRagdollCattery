@@ -7,6 +7,12 @@
 		this.setPhotoIndex = function(index){
 			this.imageIndex = index || 0;
 		}
+		
+		this.getPhotoUrl = function(ragdoll){
+			return (this.imageIndex < ragdoll.Photos.length)
+				? ragdoll.Photos[this.imageIndex]
+				: 'images/error.jpg';
+		}
 	});
 	
 	app.controller('RagdollController', function(){

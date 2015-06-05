@@ -12,7 +12,6 @@
 	</head>
 	
 	<body ng-controller="RagdollController as ragdollCtrl">
-		
 		<div id="ragdollContainer">
 			<h1>Angular Ragdoll Cattery!</h1>
 			<div class="ragdollKitty" ng-repeat="ragdoll in ragdollCtrl.ragdolls">
@@ -23,7 +22,7 @@
 				<span>Fluffiness factor: {{ragdoll.Fluffiness | number:2}}</span>
 				<div ng-controller="PhotoController as photoCtrl">
 					<div class="ragdollSelectedPhoto">
-						<img class="bigPhoto" ng-src="{{ragdoll.Photos[photoCtrl.imageIndex]}}" />
+						<img class="bigPhoto" ng-src="{{photoCtrl.getPhotoUrl(ragdoll)}}" />
 					</div>
 					<div class="ragdollThumbnails" ng-show="ragdoll.Photos.length > 0">
 						<div class="ragdollThumbnail" ng-repeat="photo in ragdoll.Photos" ng-click="photoCtrl.setPhotoIndex($index)">
@@ -32,11 +31,8 @@
 					</div>
 					<div class="clearBoth"></div>
 				</div>
-			
 			</div>
-			
-			<div class="clearBoth"></div>		
+			<div class="clearBoth"></div>
 		</div>
-		
 	</body>	
 </html>
