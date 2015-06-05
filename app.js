@@ -1,6 +1,14 @@
 (function(){
 	var app = angular.module('angularCattery', []);
 	
+	app.controller('PhotoController', function(){
+		this.imageIndex = 0;
+		
+		this.setPhotoIndex = function(index){
+			this.imageIndex = index || 0;
+		}
+	});
+	
 	app.controller('RagdollController', function(){
 		this.ragdolls = GetRagdolls();
 	});

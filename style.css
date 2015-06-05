@@ -3,23 +3,47 @@ body {
 }
 
 #ragdollContainer {
-	width:900px;
+	width:820px;
 	border:1px solid black;
+	border-radius:5px;
 	padding:10px;
-	margin:auto;
+	margin:10px auto;
 }
 
 .ragdollKitty {
-	width:400px;
-	height:300px;
+	width:780px;
 	float:left;
 	margin:10px;
 	border:1px solid gray;
+	border-radius:5px;
 	overflow:hidden;
 }
 
-.ragdollKitty img {
-	width:200px;
+.bigPhoto {
+	width:700px;
+}
+
+.ragdollSelectedPhoto {
+	float:left;
+}
+
+.ragdollThumbnails {
+	float:left;
+	border:0px solid black;
+	margin-left:10px;
+}
+
+.ragdollThumbnail {
+	margin-top:10px;
+	cursor:pointer;
+}
+.ragdollThumbnail:first-child {
+	margin-top:0px;
+}
+
+.smallPhoto  {
+	width:50px;
+	height:50px;
 }
 
 .clearBoth {

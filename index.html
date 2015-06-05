@@ -15,12 +15,24 @@
 		
 		<div id="ragdollContainer">
 			<h1>Angular Ragdoll Cattery!</h1>
-		
 			<div class="ragdollKitty" ng-repeat="ragdoll in ragdollCtrl.ragdolls">
-				<p><strong>Name: {{ragdoll.Name | uppercase}}</strong></p>
-				<p>Color: {{ragdoll.Color}}</p>
-				<p>Fluffiness factor: {{ragdoll.Fluffiness | number:2}}</p>
-				<img ng-src="{{ragdoll.Photos[$index]}}" />
+				<span>Name: <strong>{{ragdoll.Name | uppercase}}</strong></span>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<span>Color: {{ragdoll.Color}}</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<span>Fluffiness factor: {{ragdoll.Fluffiness | number:2}}</span>
+				<div ng-controller="PhotoController as photoCtrl">
+					<div class="ragdollSelectedPhoto">
+						<img class="bigPhoto" ng-src="{{ragdoll.Photos[photoCtrl.imageIndex]}}" />
+					</div>
+					<div class="ragdollThumbnails" ng-show="ragdoll.Photos.length > 0">
+						<div class="ragdollThumbnail" ng-repeat="photo in ragdoll.Photos" ng-click="photoCtrl.setPhotoIndex($index)">
+							<img class="smallPhoto" ng-src="{{photo}}" />
+						</div>
+					</div>
+					<div class="clearBoth"></div>
+				</div>
+			
 			</div>
 			
 			<div class="clearBoth"></div>		
