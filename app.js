@@ -15,6 +15,38 @@
 	
 	// let's pretend this is a service call
 	function GetRagdolls() {
+		return [
+			{
+				Name : 'Fleurtje',
+				Color : 'Seal point',
+				Fluffiness: 100,
+				Photos : [
+					'images/fleurtje/0.jpg',
+					'images/fleurtje/1.jpg',
+					'images/fleurtje/2.jpg',
+					'images/fleurtje/3.jpg',
+					'images/fleurtje/4.jpg',
+					'images/fleurtje/5.jpg'
+				]
+			},
+			{
+				Name : 'Random',
+				Color : 'All sorts!',
+				Fluffiness: 100,
+				Photos : [
+					'images/random/0.jpg',
+					'images/random/1.jpg',
+					'images/random/2.jpg',
+					'images/random/3.jpg',
+					'images/random/4.jpg',
+					'images/random/5.jpg'
+				]
+			}
+		];
+	}
+	
+	// let's pretend this is a service call
+	function GetRagdolls2() {
 		var ragdolls = [];
 		
 		var names = ['Pete', 'Zeke', 'Zachary', 'Jake', 'Leo', 'Dude'];
@@ -27,12 +59,12 @@
 				Color : colors[i],
 				Fluffiness: 100 + i,
 				Photos : [
-					'images/0.jpg',
-					'images/1.jpg',
-					'images/2.jpg',
-					'images/3.jpg',
-					'images/4.jpg',
-					'images/5.jpg'
+					'images/random/0.jpg',
+					'images/random/1.jpg',
+					'images/random/2.jpg',
+					'images/random/3.jpg',
+					'images/random/4.jpg',
+					'images/random/5.jpg'
 				]
 			});
 		}
