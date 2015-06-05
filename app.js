@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('angularCattery', []);
+	var app = angular.module('angularCattery', ['cattery-directives']);
 	
 	app.controller('PhotoController', function(){
 		this.imageIndex = 0;
@@ -33,6 +33,16 @@
 					'images/fleurtje/3.jpg',
 					'images/fleurtje/4.jpg',
 					'images/fleurtje/5.jpg'
+				],
+				Reviews : [
+					{
+						Body: 'This kitty is amazeballs!',
+						Author: 'Jay'
+					},
+					{
+						Body: 'Total awesomesauce!',
+						Author: 'Nathalie'
+					}
 				]
 			},
 			{
@@ -46,6 +56,16 @@
 					'images/random/3.jpg',
 					'images/random/4.jpg',
 					'images/random/5.jpg'
+				],
+				Reviews : [
+					{
+						Body: 'Maximum fluffiness accomplished!',
+						Author: 'Jay'
+					},
+					{
+						Body: 'I want to give dem cuddlez!',
+						Author: 'Nathalie'
+					}
 				]
 			}
 		];

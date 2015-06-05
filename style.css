@@ -47,6 +47,19 @@ body {
 	height:50px;
 }
 
+.ragdollReviews {
+	text-align:left;
+	margin:10px;
+}
+
+.ragdollReview {
+	border-top:1px solid gray;
+}
+
+.reviewAuthor {
+	font-style:italic;
+}
+
 .clearBoth {
 	clear:both;
 }
