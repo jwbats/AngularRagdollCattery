@@ -53,11 +53,31 @@ body {
 }
 
 .ragdollReview {
-	border-top:1px solid gray;
+	background:#EEEEEE;
 }
 
 .reviewAuthor {
 	font-style:italic;
+}
+
+.newReviewBody {
+	width:450px;
+}
+
+.newReviewAuthor {
+	width:150px;
+}
+
+.divNewReviewPreview {
+	background:#EEEEEE;
+}
+
+.divExistingReviews {
+	border:0px solid black;
+}
+
+.formNewReview {
+	border-top:1px solid black;
 }
 
 .clearBoth {

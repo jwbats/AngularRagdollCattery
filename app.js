@@ -15,6 +15,15 @@
 		}
 	});
 	
+	app.controller('ReviewController', function(){
+		this.review = {};
+		
+		this.addReview = function(ragdoll){
+			ragdoll.Reviews.push(this.review);
+			this.review = {};
+		};
+	});
+	
 	app.controller('RagdollController', function(){
 		this.ragdolls = GetRagdolls();
 	});

@@ -1,0 +1,24 @@
+<div class="ragdollReviews">
+	<div class="divExistingReviews">
+		<p><strong>Reviews</strong></p>
+		<div class="ragdollReview" ng-repeat="review in ragdoll.Reviews">
+			<p class="reviewBody">{{review.Body}}</p>
+			<p class="reviewAuthor">- {{review.Author}}</p>
+		</div>
+	</div>
+
+	<form class="formNewReview" name="formNewReview" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(ragdoll)">
+		<p><strong>Review this kitteh:</strong></p>
+	
+		<div class="divNewReviewPreview" ng-show="reviewCtrl.review.Body || reviewCtrl.review.Author">
+			<p class="reviewBody">{{reviewCtrl.review.Body}}</p>
+			<p class="reviewAuthor">- {{reviewCtrl.review.Author}}</p>
+		</div>
+		<div class="divNewReview">
+			<input class="newReviewBody" type="text" placeholder="Enter your comment..." ng-model="reviewCtrl.review.Body" />
+			<input class="newReviewAuthor" type="text" placeholder="Your name..." ng-model="reviewCtrl.review.Author" />
+			<input type="submit" value="Submit Review" />
+		</div>
+	</form>
+	
+</div>
